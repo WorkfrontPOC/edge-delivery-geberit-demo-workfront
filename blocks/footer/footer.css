@@ -1,14 +1,24 @@
 footer {
   padding: 2rem;
   background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+  font-size: 0.875rem;;
 }
 
 footer .footer {
   max-width: 1200px;
-  margin: auto;
+  margin: right;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+footer a:any-link {
+  padding: 5px;
+}
+
+@media (width >= 900px) {
+  footer .section {
+    text-align: right;
+  }
 }
