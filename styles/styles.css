@@ -95,8 +95,12 @@ h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); font-weight: normal; }
 h6 { font-size: var(--heading-font-size-xs); }
+
+h5 {
+  font-size: var(--heading-font-size-s);
+  font-weight: normal;
+}
 
 p,
 dl,
