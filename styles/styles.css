@@ -181,8 +181,9 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
   color: var(--text-color);
+  padding-left: 0;
+  padding-right: 0;
 }
 
 main img {
@@ -225,4 +226,9 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+.icon-right-arrow {
+  height: 16px;
+  width: 16px;
 }
