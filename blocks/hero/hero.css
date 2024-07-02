@@ -33,11 +33,11 @@ main .hero-container {
   height: 100%;
 }
 
-.hero > div {
+main .hero > div {
   background: white;
   padding-left: 10px;
   padding-right: 10px;
-  width: 50%;
+  max-width: 50%;
 }
 
 .hero .button:any-link {
