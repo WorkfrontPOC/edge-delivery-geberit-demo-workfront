@@ -51,6 +51,7 @@ main .hero-container {
   height: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  position: relative;
 }
 
 .hero-text-content {
@@ -130,4 +131,10 @@ main .hero-container {
   100% {
     opacity: 0.8;
   }
+}
+
+.hero.text-top .hero-text-content {
+  position: static;
+  transform: unset;
+
 }

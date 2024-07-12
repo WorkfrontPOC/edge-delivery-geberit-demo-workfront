@@ -74,6 +74,22 @@
   object-fit: cover;
 }
 
+.columns.align-top > div {
+  align-items: flex-start;
+}
+
+.columns.align-top .text-column {
+  margin-left: 100px;
+}
+
+.columns.align-top h1,
+.columns.align-top h2,
+.columns.align-top h3,
+.columns.align-top h4,
+.columns.align-top h5,
+.columns.align-top h6 {
+  margin: 0;
+}
 
 @media (width >= 900px) {
   .columns > div {

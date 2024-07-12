@@ -10,33 +10,9 @@ import {
   waitForLCP,
   loadBlocks,
   loadCSS,
-  createOptimizedPicture,
 } from './aem.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
-
-/**
- * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
- */
-function buildHeroBlock(main) {
-  const picture = main.querySelector('.hero picture');
-
-  if (picture) {
-    const imageURL = picture.querySelector('img').src;
-    const imgEl = createOptimizedPicture(imageURL, '', true, [{ width: '2000' }]);
-    const backgroundSrc = imgEl.querySelector('img').src;
-    const heroEl = picture.closest('.hero');
-
-    heroEl.style.backgroundImage = `url(${backgroundSrc})`;
-    picture.parentElement.remove();
-
-    const contentWrapEl = heroEl.querySelector('& > div')
-    contentWrapEl.classList.add('hero-content-wrapper');
-    const contentEl = heroEl.querySelector('& > div > div');
-    contentEl.classList.add('hero-text-content');
-  }
-}
 
 /**
  * load fonts.css and set a session storage flag
@@ -56,7 +32,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
+    /* add autoblock functions here */
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
