@@ -1,4 +1,4 @@
-import { createOptimizedPicture } from "../../scripts/aem.js";
+import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   const picture = block.querySelector('picture');
@@ -12,7 +12,7 @@ export default async function decorate(block) {
     heroEl.style.backgroundImage = `url(${backgroundSrc})`;
     picture.parentElement.remove();
 
-    const contentWrapEl = heroEl.querySelector('& > div')
+    const contentWrapEl = heroEl.querySelector('& > div');
     contentWrapEl.classList.add('hero-content-wrapper');
     const contentEl = heroEl.querySelector('& > div > div');
     contentEl.classList.add('hero-text-content');
