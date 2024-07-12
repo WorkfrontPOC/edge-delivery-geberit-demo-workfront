@@ -38,7 +38,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
 }
 
 @font-face {
@@ -71,6 +71,7 @@ body {
 
 body.appear {
   display: block;
+  padding-top: 38px;
 }
 
 header {
@@ -231,4 +232,33 @@ main .section.highlight {
 .icon-right-arrow {
   height: 16px;
   width: 16px;
+}
+
+h2 {
+  font-family: AktivGrotesk, helvetica, arial, sans-serif;
+  font-size: 1.625rem;
+  font-weight: 300;
+  line-height: 2rem;
+  text-transform: inherit;
+}
+
+@media (min-width: 48rem) {
+  h2 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  h2 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+  }
 }

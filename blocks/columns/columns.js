@@ -13,6 +13,27 @@ export default function decorate(block) {
           picWrapper.classList.add('columns-img-col');
         }
       }
+
+      if (pic) {
+        col.classList.add('column-with-image');
+      } else {
+        col.classList.add('text-column');
+      }
+
+      // logic for bento variant
+      if (block.classList.contains('bento')) {
+        const textWrapper = document.createElement('div');
+        textWrapper.append(...col.children);
+        col.append(textWrapper);
+
+        if (pic) {
+          const el = document.createElement('div');
+          el.classList.add('picture-wrapper');
+          pic.parentElement.remove();
+          el.append(pic);
+          col.append(el);
+        }
+      }
     });
   });
 }

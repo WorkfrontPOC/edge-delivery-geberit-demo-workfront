@@ -1,3 +1,7 @@
+.columns-wrapper {
+  margin-top: 1.5rem !important;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -18,6 +22,58 @@
 .columns > div > .columns-img-col img {
   display: block;
 }
+
+.columns.bento > div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  align-items: stretch;
+}
+
+.two-one.columns.bento > div {
+  grid-template-columns: 2fr 1fr;
+}
+
+.columns.bento .column-with-image {
+  display: flex;
+}
+
+.columns.bento .column-with-image > * {
+  width: 50%;
+}
+
+.columns.bento .text-column {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.columns.bento .column-with-image div {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.columns.bento .column-with-image div a {
+  color: #fff;
+}
+
+.columns.bento div.picture-wrapper {
+  padding: 0;
+}
+
+.columns.bento picture {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.columns.bento picture {
+  object-fit: cover;
+}
+
 
 @media (width >= 900px) {
   .columns > div {

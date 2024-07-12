@@ -6,6 +6,16 @@ header .nav-wrapper {
   position: fixed;
 }
 
+header .nav-wrapper::before {
+  content: '';
+  width: 100vw;
+  height: 38px;
+  display: block;
+  position: absolute;
+  top: -38px;
+  background: white;
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;
