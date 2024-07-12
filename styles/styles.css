@@ -229,9 +229,11 @@ main .section.highlight {
   background-color: var(--light-color);
 }
 
-.icon-right-arrow {
+.icon-right-arrow,
+.icon-right-arrow-white {
   height: 16px;
   width: 16px;
+  padding-left: 0;
 }
 
 /* stylelint-disable-next-line no-duplicate-selectors */
@@ -262,6 +264,10 @@ h2 {
       font-size: 2.25rem;
       line-height: 2.75rem;
   }
+}
+
+.default-content-wrapper .button-container .button {
+  padding-left: 0;
 }
 
 .section.gray-bg {
