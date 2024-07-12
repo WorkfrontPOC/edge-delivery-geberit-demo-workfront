@@ -1,5 +1,5 @@
-.columns-wrapper {
-  margin-top: 1.5rem !important;
+.section.columns-container .columns-wrapper {
+  margin-top: 1.5rem;
 }
 
 .columns > div {
