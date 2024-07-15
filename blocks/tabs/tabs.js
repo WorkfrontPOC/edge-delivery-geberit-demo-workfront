@@ -5,6 +5,12 @@ function hasWrapper(el) {
   return !!el.firstElementChild && window.getComputedStyle(el.firstElementChild).display === 'block';
 }
 
+function getContentdById(bootstrapEl, id) {
+  const tabContentEl = document.querySelector(`.${id}`);
+
+  bootstrapEl.parentElement.replaceWith(tabContentEl);
+}
+
 export default async function decorate(block) {
   // build tablist
   const tablist = document.createElement('div');
@@ -48,6 +54,22 @@ export default async function decorate(block) {
     });
     tablist.append(button);
     tab.remove();
+  });
+
+  const tabsContentList = [...block.querySelectorAll('.tabs-panel > div')];
+
+  tabsContentList.forEach((el) => {
+    const contentLink = [...el.querySelectorAll('a')].find((link) => link.textContent.startsWith('#id-'));
+
+    if (!contentLink) {
+      return;
+    }
+
+    const contentLocation = contentLink.textContent.replace('#', '');
+
+    if (contentLocation) {
+      getContentdById(contentLink, contentLocation);
+    }
   });
 
   block.prepend(tablist);

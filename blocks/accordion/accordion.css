@@ -41,9 +41,31 @@
 
 .accordion details .accordion-item-body {
   padding: 0 16px;
+  font-size: 16px;
+}
+
+.accordion details .accordion-item-body a {
+  display: inline-flex;
+  align-items: baseline;
+  font-weight: 400;
+}
+
+.accordion details .accordion-item-body a .icon {
+  padding: 0 8px;
+  height: 20px;
+  width: 20px;
+  align-self: center;
 }
 
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid var(--dark-color);
   background-color: var(--background-color);
+}
+
+.accordion .accordion-item-label {
+  font-weight: 700;
+}
+
+.accordion .button-container {
+  margin: 0;
 }
