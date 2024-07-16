@@ -1,3 +1,7 @@
+.section.columns-container .columns-wrapper {
+  margin-top: 1.5rem;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -17,6 +21,70 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+}
+
+.columns.bento > div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1.5rem;
+  align-items: stretch;
+}
+
+.columns.align-top > div {
+  align-items: flex-start;
+}
+
+.two-one.columns.bento > div {
+  grid-template-columns: 2fr 1fr;
+}
+
+.columns.bento .column-with-image {
+  display: flex;
+}
+
+.columns.bento .column-with-image > * {
+  width: 50%;
+}
+
+.columns.bento .text-column {
+  padding: 2rem;
+  background-color: rgb(0 0 0 / 6%);
+}
+
+.columns.bento .column-with-image div {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.columns.bento .column-with-image div a {
+  color: #fff;
+}
+
+.columns.bento div.picture-wrapper {
+  padding: 0;
+}
+
+.columns.bento picture {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns.align-top .text-column {
+  margin-left: 100px;
+}
+
+.columns.align-top h1,
+.columns.align-top h2,
+.columns.align-top h3,
+.columns.align-top h4,
+.columns.align-top h5,
+.columns.align-top h6 {
+  margin: 0;
 }
 
 @media (width >= 900px) {

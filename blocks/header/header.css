@@ -4,6 +4,17 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  box-shadow: rgb(0 0 0 / 20%) 0 3px 12px 0;
+}
+
+header .nav-wrapper::before {
+  content: '';
+  width: 100vw;
+  height: 38px;
+  display: block;
+  position: absolute;
+  top: -38px;
+  background: white;
 }
 
 header nav {

@@ -3,17 +3,27 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
 
-.cards > ul > li {
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color);
+.cards h1,
+.cards h2,
+.cards h3,
+.cards h4,
+.cards h5,
+.cards h6 {
+  margin: 0;
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  display: flex;
+}
+
+.cards .cards-card-body > * {
+  width: 50%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .cards .cards-card-image {
@@ -26,6 +36,5 @@
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
 }

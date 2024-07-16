@@ -21,7 +21,7 @@
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --heading-font-family: font-family: calibre, helvetica, tahoma, arial, sans-serif;;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -38,7 +38,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
 }
 
 @font-face {
@@ -60,7 +60,7 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
+  font-size: 0.875rem;
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
@@ -71,6 +71,7 @@ body {
 
 body.appear {
   display: block;
+  padding-top: 38px;
 }
 
 header {
@@ -95,8 +96,12 @@ h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+h5 {
+  font-size: var(--heading-font-size-s);
+  font-weight: normal;
+}
 
 p,
 dl,
@@ -132,13 +137,13 @@ main pre {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--link-hover-color);
+  color: var(--text-color);
 }
 
 /* buttons */
@@ -154,20 +159,17 @@ button {
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
+  color: var(--text-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
@@ -180,8 +182,9 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
   color: var(--text-color);
+  padding-left: 0;
+  padding-right: 0;
 }
 
 main img {
@@ -194,6 +197,7 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
+  padding: 10px;
 }
 
 .icon img {
@@ -223,4 +227,53 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+.icon-right-arrow,
+.icon-right-arrow-white {
+  height: 16px;
+  width: 16px;
+  padding-left: 0;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+h2 {
+  font-family: AktivGrotesk, helvetica, arial, sans-serif;
+  font-size: 1.625rem;
+  font-weight: 300;
+  line-height: 2rem;
+  text-transform: inherit;
+}
+
+@media (width >= 48rem) {
+  h2 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+  }
+}
+
+@media (width >= 64rem) {
+  h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+  }
+}
+
+@media (width >= 80rem) {
+  h2 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+  }
+}
+
+.default-content-wrapper .button-container .button {
+  padding-left: 0;
+}
+
+.section.gray-bg {
+  background-color: #f7f7f7;
+}
+
+.block a.button {
+  padding: 0;
 }
