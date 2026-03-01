@@ -62,10 +62,10 @@ const triggerFusionWebhook = async (event) => {
 const initWebhook = () => {
   const sk = document.querySelector('aem-sidekick');
   if (sk) {
-    sk.addEventListener('Updated', triggerFusionWebhook);
+    sk.addEventListener('previewed', triggerFusionWebhook);
   } else {
     document.addEventListener('sidekick-ready', () => {
-      document.querySelector('aem-sidekick').addEventListener('Updated', triggerFusionWebhook);
+      document.querySelector('aem-sidekick').addEventListener('previewed', triggerFusionWebhook);
     }, { once: true });
   }
 };
