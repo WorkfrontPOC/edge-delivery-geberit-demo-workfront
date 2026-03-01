@@ -1,4 +1,4 @@
-const FUSION_WEBHOOK_URL = 'https://<your-fusion-domain>/<your-webhook-endpoint>';
+const FUSION_WEBHOOK_URL = 'https://hook.app.workfrontfusion.com/jj0x0bob52cs93e77fjcqxszqs79y50r';
 
 const triggerFusionWebhook = async (event) => {
   // 1. Get the path from the event detail
