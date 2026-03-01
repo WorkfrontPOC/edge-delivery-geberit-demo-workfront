@@ -62,7 +62,7 @@ const triggerFusionWebhook = async (event) => {
 const initWebhook = () => {
   const sk = document.querySelector('aem-sidekick');
   if (sk) {
-    // Note the "custom:" prefix added to the event name!
+    // Listen for the custom event prefix
     sk.addEventListener('custom:send-to-workfront', triggerFusionWebhook);
   } else {
     document.addEventListener('sidekick-ready', () => {
