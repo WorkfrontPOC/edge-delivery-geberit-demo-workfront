@@ -7,6 +7,12 @@
       "url": "/tools/sidekick/library.html",
       "excludePaths": ["**"],
       "includePaths": ["**.docx**", "/document/**"]
+    },
+    {
+      "id": "send-to-workfront",
+      "title": "Send to Workfront",
+      "environments": ["preview"],
+      "event": "send-to-workfront"
     }
   ]
 }
